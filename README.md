@@ -1,1 +1,1 @@
-# wws
+Watson Workspaceに関するサンプルコードを置いていきます。
