@@ -21,10 +21,10 @@ var assistant = new watson.AssistantV1({
   version: '2018-02-16'
 });
 
-var APP_ID = "4de34216-c716-459f-a0d0-f1cc0c049eea";
-var APP_SECRET = "3TSeRm03JakwhndqDe7FXbETdu42";
-var SPACE_ID = "5acd8d82e4b09002fbdb5745";
-var APP_WEBHOOK_SECRET = "9ignzt4626qircm0bb4nw3pvzbxi0tks";
+var APP_ID = "{your_APP_ID}";
+var APP_SECRET = "{your_APP_SECRET}";
+var SPACE_ID = "{your_SPACE_ID}";
+var APP_WEBHOOK_SECRET = "{your_APP_WEBHOOK_SECRET}";
 
 const WWS_URL = "https://api.watsonwork.ibm.com"
 const AUTHORIZATION_API = "/oauth/token";
@@ -150,7 +150,7 @@ app.post("/callback", jsonParser, function(req, res) {
       */
 
     assistant.message({
-      workspace_id: 'cee45ff3-2695-4c1b-97c7-1d77e08c132a',
+      workspace_id: '{your_workspace_id}',
       input: {'text': req.body.content}
       },  function(err, response) {
       if (err)
