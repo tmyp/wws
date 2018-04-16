@@ -20,6 +20,7 @@ var assistant = new watson.AssistantV1({
   password: 'myL1jIRGBTqV',
   version: '2018-02-16'
 });
+var WORKSPACE_ID = "{your_WORKSPACE_ID}";
 
 var APP_ID = "{your_APP_ID}";
 var APP_SECRET = "{your_APP_SECRET}";
@@ -143,14 +144,10 @@ app.post("/callback", jsonParser, function(req, res) {
 
   if(req.body.type === 'message-created'){
     console.log("Message Created received");
-    console.log(req.body.content);
-    /*
-    if(req.body.content.indexOf("出張") >= 0){
-      var term = "お疲れ様でした";
-      */
+    console.log(req.body.content);   
 
     assistant.message({
-      workspace_id: '{your_workspace_id}',
+      workspace_id: WORKSPACE_ID,
       input: {'text': req.body.content}
       },  function(err, response) {
       if (err)
