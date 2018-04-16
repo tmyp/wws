@@ -16,8 +16,8 @@ var usersRouter = require('./routes/users');
 var watson = require('watson-developer-cloud');
 
 var assistant = new watson.AssistantV1({
-  username: '995b8a5c-1b0f-42be-9ab3-953a3898a59c',
-  password: 'myL1jIRGBTqV',
+  username: '{your_username}',
+  password: '{your_password}',
   version: '2018-02-16'
 });
 var WORKSPACE_ID = "{your_WORKSPACE_ID}";
