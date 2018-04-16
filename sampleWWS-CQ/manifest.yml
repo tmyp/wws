@@ -1,0 +1,6 @@
+---
+applications:
+ - name: sampleWWS-CQ
+   random-route: true
+   memory: 512M
+   instance: 1
